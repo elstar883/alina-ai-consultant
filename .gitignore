@@ -1,0 +1,51 @@
+# --- Секреты и локальная конфигурация ---
+.env
+.env.*
+!.env.example
+
+# --- Python ---
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+dist/
+*.egg-info/
+.eggs/
+pip-wheel-metadata/
+
+# --- Виртуальные окружения ---
+.venv/
+venv/
+env/
+ENV/
+
+# --- Тесты, линтеры, покрытие ---
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+.coverage.*
+htmlcov/
+coverage.xml
+
+# --- Логи и локальные данные ---
+logs/
+*.log
+data/
+!data/.gitkeep
+
+# --- Сертификаты и ключи ---
+certs/
+*.pem
+*.crt
+*.key
+*.p12
+*.pfx
+
+# --- IDE / OS ---
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
