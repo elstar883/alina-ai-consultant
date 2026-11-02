@@ -1,0 +1,38 @@
+[Unit]
+Description=Alina — AI consultant bot for VK (GigaChat)
+Documentation=https://github.com/elstar883/alina-ai-consultant
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=zerocoder
+Group=zerocoder
+WorkingDirectory=/opt/alina-ai-consultant
+EnvironmentFile=/opt/alina-ai-consultant/.env
+Environment=PYTHONPATH=/opt/alina-ai-consultant/src
+Environment=PYTHONUNBUFFERED=1
+ExecStart=/opt/alina-ai-consultant/.venv/bin/python -m alina_bot
+Restart=always
+RestartSec=5
+TimeoutStopSec=30
+KillSignal=SIGTERM
+
+# Логи — в journald
+StandardOutput=journal
+StandardError=journal
+
+# Ограничения безопасности
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=strict
+ProtectHome=true
+ReadWritePaths=/opt/alina-ai-consultant
+ProtectKernelTunables=true
+ProtectKernelModules=true
+ProtectControlGroups=true
+RestrictSUIDSGID=true
+LockPersonality=true
+
+[Install]
+WantedBy=multi-user.target
