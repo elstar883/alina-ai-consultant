@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "alina-ai-consultant"
-version = "1.0.0"
+version = "1.0.1"
 description = "ИИ-консультант Zerocoder для сообщества ВКонтакте на GigaChat API"
 readme = "README.md"
 requires-python = ">=3.10"

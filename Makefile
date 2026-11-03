@@ -22,6 +22,7 @@ venv:
 install: venv
 	$(BIN)/python -m pip install --upgrade pip
 	$(BIN)/python -m pip install -r requirements.txt
+	$(BIN)/python -m pip install -e .
 
 dev: venv
 	$(BIN)/python -m pip install --upgrade pip

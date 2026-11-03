@@ -163,6 +163,7 @@ source .venv/bin/activate        # macOS / Linux
 # .venv\Scripts\activate         # Windows
 
 pip install -r requirements.txt
+pip install -e .
 ```
 
 ### 2. Конфигурация
@@ -180,7 +181,7 @@ python -m alina_bot --check   # проверить VK и GigaChat
 python -m alina_bot           # запустить бота
 ```
 
-Альтернатива после `pip install -e .`:
+После установки доступна команда `alina-bot`:
 
 ```bash
 alina-bot --check
